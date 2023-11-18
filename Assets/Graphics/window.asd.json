@@ -1,0 +1,19 @@
+{
+    "version": "1.0",
+    "fileName": "window.png",
+    "width": 34,
+    "height": 102,
+    "columns": 1,
+    "rows": 3,
+    "frames": [
+        {
+            "duration": 80
+        },
+        {
+            "duration": 80
+        },
+        {
+            "duration": 80
+        }
+    ]
+}
