@@ -9,22 +9,23 @@ namespace BFX
         public GameObject snappedObject;
         public bool taken;
 
-        private void OnTriggerStay(Collider other)
+
+        private void OnTriggerStay2D(Collider2D collision)
         {
             // check if collided objcet is a draggable by looking for draggable script
-            if (other.gameObject.GetComponent<Drag>() && !taken && other.gameObject.GetComponent<Drag>().dragging)
+            if (collision.gameObject.GetComponent<Drag>() && !taken && collision.gameObject.GetComponent<Drag>().dragging)
             {
-                Drag client = other.gameObject.GetComponent<Drag>();
+                Drag client = collision.gameObject.GetComponent<Drag>();
                 client.snapped = true;
                 client.snapPoint = this;
                 taken = true;
             }
         }
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerExit2D(Collider2D collision)
         {
-            if (other.gameObject.GetComponent<Drag>())
+            if (collision.gameObject.GetComponent<Drag>())
             {
-                Drag client = other.gameObject.GetComponent<Drag>();
+                Drag client = collision.gameObject.GetComponent<Drag>();
                 client.snapped = false;
                 client.snapPoint = null;
                 taken = false;
