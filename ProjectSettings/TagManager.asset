@@ -44,3 +44,6 @@ TagManager:
   - name: Window
     uniqueID: 2320974491
     locked: 0
+  - name: Patterns
+    uniqueID: 1929762063
+    locked: 0
