@@ -20,7 +20,7 @@ namespace BFX
         private void OnMouseDown()
         {
             offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            dragging = true;   
+            dragging = true;
         }
 
         private void OnMouseUp()
