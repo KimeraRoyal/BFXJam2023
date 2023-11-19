@@ -43,31 +43,5 @@ namespace BFX
         {
             dragging = false;
         }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Debug.Log("2DCEnter");
-        }
-        private void OnCollisionStay2D(Collision2D collision)
-        {
-            Debug.Log("2DCStay");
-        }
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            Debug.Log("2DCExit");
-        }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            Debug.Log("CEnter");
-        }
-        private void OnCollisionStay(Collision collision)
-        {
-            Debug.Log("CStay");
-        }
-        private void OnCollisionExit(Collision collision)
-        {
-            Debug.Log("CExit");
-        }
     }
 }

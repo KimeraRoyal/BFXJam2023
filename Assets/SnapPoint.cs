@@ -9,10 +9,10 @@ namespace BFX
         public GameObject snappedObject;
         public bool taken;
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             // check if collided objcet is a draggable by looking for draggable script
-            if (other.gameObject.GetComponent<Drag>())
+            if (other.gameObject.GetComponent<Drag>() && !taken)
             {
                 Drag client = other.gameObject.GetComponent<Drag>();
                 client.snapped = true;
