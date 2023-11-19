@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ddf4ec90c74817be49556dfad17477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_label: window
+  m_label: track1_140bpm_4/4.bfx
 --- !u!1 &6927064458938010623
 GameObject:
   m_ObjectHideFlags: 0
