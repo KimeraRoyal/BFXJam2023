@@ -433,18 +433,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1657672915230947735, guid: e6af5d665ca196d4f813deab7d213b5d, type: 3}
-      propertyPath: m_Size.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3109476195694579707, guid: e6af5d665ca196d4f813deab7d213b5d, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 939676154}
-    - target: {fileID: 3737844717539185004, guid: e6af5d665ca196d4f813deab7d213b5d, type: 3}
-      propertyPath: m_Size.x
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5992271379380984113, guid: e6af5d665ca196d4f813deab7d213b5d, type: 3}
       propertyPath: m_Name
       value: Window
@@ -488,18 +476,6 @@ PrefabInstance:
     - target: {fileID: 7086282746237210190, guid: e6af5d665ca196d4f813deab7d213b5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294243246974334534, guid: e6af5d665ca196d4f813deab7d213b5d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 7319406679623421521, guid: e6af5d665ca196d4f813deab7d213b5d, type: 3}
-      propertyPath: m_Size.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9139809639438195019, guid: e6af5d665ca196d4f813deab7d213b5d, type: 3}
-      propertyPath: m_size.x
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
