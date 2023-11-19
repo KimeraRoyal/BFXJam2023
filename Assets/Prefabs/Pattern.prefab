@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4885853518018503871}
   - component: {fileID: 8513989639622958785}
   - component: {fileID: 3528115364187209568}
+  - component: {fileID: 2759586523310579908}
   m_Layer: 0
   m_Name: Pattern
   m_TagString: Untagged
@@ -166,6 +167,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2759586523310579908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180030948616907064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ddf4ec90c74817be49556dfad17477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_label: window
 --- !u!1 &5494881857658642433
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +307,7 @@ GameObject:
   - component: {fileID: 7607381068081147939}
   - component: {fileID: 5682191634405971846}
   - component: {fileID: 7304127101753741126}
+  - component: {fileID: 2485552372962712792}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -356,12 +371,12 @@ SpriteRenderer:
   m_SortingLayerID: 1929762063
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4dfb9ee6b6031d147b21b3a204f07582, type: 3}
+  m_Sprite: {fileID: 1113581783, guid: 27f3435a40bd2cd46b52ab927135725a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 8, y: 1}
+  m_Size: {x: 3, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -385,6 +400,22 @@ MonoBehaviour:
   m_padding: {x: 0, y: 0}
   m_trackWidth: 1
   m_trackHeight: 1
+--- !u!114 &2485552372962712792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541160276739925222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da46dc660af1aa419f6e95e7488aff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_backgrounds:
+  - {fileID: 1113581783, guid: 27f3435a40bd2cd46b52ab927135725a, type: 3}
+  - {fileID: 412299851, guid: 27f3435a40bd2cd46b52ab927135725a, type: 3}
+  - {fileID: -675330600, guid: 27f3435a40bd2cd46b52ab927135725a, type: 3}
 --- !u!1 &8618054539646782216
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6625412681499015804}
   - component: {fileID: 7223120125567970163}
+  - component: {fileID: 2392759531897391009}
   m_Layer: 0
   m_Name: Waveform
   m_TagString: Untagged
@@ -603,3 +635,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2392759531897391009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755221876481391033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa033e9cbd49664cb9ce0e8716d8195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_backgrounds: []
