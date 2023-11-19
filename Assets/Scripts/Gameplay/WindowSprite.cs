@@ -1,4 +1,5 @@
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
 
 namespace BFX
 {
@@ -11,14 +12,17 @@ namespace BFX
         [SerializeField] private Vector2 m_anchor = Vector2.one * 0.5f;
         [SerializeField] private Vector2 m_pivot = Vector2.one * 0.5f;
 
+        [SerializeField] private Vector2 m_offset = Vector2.zero;
+        [SerializeField] private Vector2 m_padding = Vector2.zero;
+
         [SerializeField] private bool m_trackWidth = true;
         [SerializeField] private bool m_trackHeight = true;
         
         private void Awake()
         {
-            m_sprite = GetComponent<SpriteRenderer>();
-            
             m_window = GetComponentInParent<Window>();
+            
+            m_sprite = GetComponent<SpriteRenderer>();
         }
 
         private void OnEnable()
@@ -36,10 +40,11 @@ namespace BFX
             var newSize = m_sprite.size;
             if (m_trackWidth) { newSize.x = _size.x; }
             if (m_trackHeight) { newSize.y = _size.y; }
-            m_sprite.size = newSize;
+            m_sprite.size = newSize + m_padding;
 
-            var offset = (Vector2.one - m_pivot * 2.0f) * m_sprite.size * 0.5f;
-            transform.localPosition = (Vector2.one - m_anchor * 2.0f) * _size * 0.5f + offset;
+            var pivotOffset = -(Vector2.one - m_pivot * 2.0f) * m_sprite.size * 0.5f;
+            var anchoredPosition = -(Vector2.one - m_anchor * 2.0f) * _size * 0.5f;
+            transform.localPosition = anchoredPosition - pivotOffset + m_offset;
         }
     }
 }
