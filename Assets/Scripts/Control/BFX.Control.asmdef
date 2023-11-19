@@ -1,0 +1,17 @@
+{
+    "name": "BFX.Control",
+    "rootNamespace": "BFX",
+    "references": [
+        "GUID:e486c9dc83f138948848dc909864a63e",
+        "GUID:df42c2b021d3f66478099feb037d2d70"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
