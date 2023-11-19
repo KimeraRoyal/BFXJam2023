@@ -3,9 +3,9 @@ using Vector2 = UnityEngine.Vector2;
 
 namespace BFX
 {
-    public class WindowSprite : MonoBehaviour
+    public class NoteRegionFittedSprite : MonoBehaviour
     {
-        private Window m_window;
+        private NoteRegion m_noteRegion;
         
         private SpriteRenderer m_sprite;
 
@@ -20,19 +20,19 @@ namespace BFX
         
         private void Awake()
         {
-            m_window = GetComponentInParent<Window>();
+            m_noteRegion = GetComponentInParent<NoteRegion>();
             
             m_sprite = GetComponent<SpriteRenderer>();
         }
 
         private void OnEnable()
         {
-            m_window.OnSizeUpdated += OnSizeUpdated;
+            if(m_noteRegion) { m_noteRegion.OnSizeUpdated += OnSizeUpdated; }
         }
 
         private void OnDisable()
         {
-            m_window.OnSizeUpdated -= OnSizeUpdated;
+            if(m_noteRegion) { m_noteRegion.OnSizeUpdated -= OnSizeUpdated; }
         }
 
         private void OnSizeUpdated(Vector2 _size)

@@ -260,6 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7086282746237210190}
   - component: {fileID: 9139809639438195019}
+  - component: {fileID: 2573620761877042997}
   - component: {fileID: 7470035354068141974}
   - component: {fileID: 6720540618242416439}
   m_Layer: 0
@@ -300,7 +301,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_label: track1_140bpm_4-4.bfx
-  m_size: {x: 3, y: 2}
+--- !u!114 &2573620761877042997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5992271379380984113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6244e25a6349a54499b4e2aebd273d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_size: {x: 8, y: 2}
 --- !u!61 &7470035354068141974
 BoxCollider2D:
   m_ObjectHideFlags: 0

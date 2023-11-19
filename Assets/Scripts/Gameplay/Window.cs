@@ -3,43 +3,37 @@ using UnityEngine;
 
 namespace BFX
 {
+    [RequireComponent(typeof(NoteRegion))]
     public class Window : MonoBehaviour
     {
+        private NoteRegion m_noteRegion;
+        
         [SerializeField] private string m_label = "window";
         private string m_lastLabel;
-        
-        [SerializeField] private Vector2 m_size = Vector2.one;
-        private Vector2 m_lastSize;
 
         public Action<string> OnLabelUpdated;
-        public Action<Vector2> OnSizeUpdated;
+
+        public NoteRegion NoteRegion => m_noteRegion;
 
         public string Label
         {
             get => m_label;
             set => m_label = value;
         }
-        
-        public Vector2 Size
+
+        private void Awake()
         {
-            get => m_size;
-            set => m_size = value;
+            m_noteRegion = GetComponentInChildren<NoteRegion>();
         }
 
         private void Start()
         {
-            CheckValuesChanged();
+            CheckLabelChanged();
         }
 
         private void Update()
         {
-            CheckValuesChanged();
-        }
-
-        private void CheckValuesChanged()
-        {
             CheckLabelChanged();
-            CheckSizeChanged();
         }
 
         private void CheckLabelChanged()
@@ -47,13 +41,6 @@ namespace BFX
             if (m_label == m_lastLabel) { return; }
             OnLabelUpdated?.Invoke(m_label);
             m_lastLabel = m_label;
-        }
-
-        private void CheckSizeChanged()
-        {
-            if(m_size == m_lastSize) { return; }
-            OnSizeUpdated?.Invoke(m_size);
-            m_lastSize = m_size;
         }
     }
 }

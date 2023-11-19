@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace BFX
 {
-    public class WindowTitle : MonoBehaviour
+    public class WindowLabel : MonoBehaviour
     {
         private Window m_window;
+        private NoteRegion m_noteRegion;
         
         private RectTransform m_rectTransform;
         private TMP_Text m_text;
@@ -15,6 +16,7 @@ namespace BFX
         private void Awake()
         {
             m_window = GetComponentInParent<Window>();
+            m_noteRegion = GetComponentInParent<NoteRegion>();
             
             m_rectTransform = GetComponent<RectTransform>();
             m_text = GetComponentInChildren<TMP_Text>();
@@ -22,14 +24,14 @@ namespace BFX
 
         private void OnEnable()
         {
-            m_window.OnLabelUpdated += OnLabelUpdated;
-            m_window.OnSizeUpdated += OnSizeUpdated;
+            if(m_window) { m_window.OnLabelUpdated += OnLabelUpdated; }
+            if(m_noteRegion) { m_noteRegion.OnSizeUpdated += OnSizeUpdated; }
         }
 
         private void OnDisable()
         {
-            m_window.OnLabelUpdated -= OnLabelUpdated;
-            m_window.OnSizeUpdated -= OnSizeUpdated;
+            if(m_window) { m_window.OnLabelUpdated -= OnLabelUpdated; }
+            if(m_noteRegion) { m_noteRegion.OnSizeUpdated -= OnSizeUpdated; }
         }
 
         private void OnSizeUpdated(Vector2 _size)

@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace BFX
 {
-    public class WindowCollider : MonoBehaviour
+    public class NoteRegionFittedCollider : MonoBehaviour
     {
-        private Window m_window;
+        private NoteRegion m_noteRegion;
         
         private BoxCollider2D m_collider;
 
@@ -13,19 +13,19 @@ namespace BFX
         
         private void Awake()
         {
-            m_window = GetComponentInParent<Window>();
+            m_noteRegion = GetComponentInParent<NoteRegion>();
             
             m_collider = GetComponent<BoxCollider2D>();
         }
 
         private void OnEnable()
         {
-            m_window.OnSizeUpdated += OnSizeUpdated;
+            if(m_noteRegion) { m_noteRegion.OnSizeUpdated += OnSizeUpdated; }
         }
 
         private void OnDisable()
         {
-            m_window.OnSizeUpdated -= OnSizeUpdated;
+            if (m_noteRegion) { m_noteRegion.OnSizeUpdated -= OnSizeUpdated; }
         }
 
         private void OnSizeUpdated(Vector2 _size)
