@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace BFX
 {
-    public class WindowLabel : MonoBehaviour
+    public class LabelCanvas : MonoBehaviour
     {
-        private Window m_window;
+        private LabelledRegion m_labelledRegion;
         private NoteRegion m_noteRegion;
         
         private RectTransform m_rectTransform;
@@ -15,7 +15,7 @@ namespace BFX
 
         private void Awake()
         {
-            m_window = GetComponentInParent<Window>();
+            m_labelledRegion = GetComponentInParent<LabelledRegion>();
             m_noteRegion = GetComponentInParent<NoteRegion>();
             
             m_rectTransform = GetComponent<RectTransform>();
@@ -24,13 +24,13 @@ namespace BFX
 
         private void OnEnable()
         {
-            if(m_window) { m_window.OnLabelUpdated += OnLabelUpdated; }
+            if(m_labelledRegion) { m_labelledRegion.OnLabelUpdated += OnLabelUpdated; }
             if(m_noteRegion) { m_noteRegion.OnSizeUpdated += OnSizeUpdated; }
         }
 
         private void OnDisable()
         {
-            if(m_window) { m_window.OnLabelUpdated -= OnLabelUpdated; }
+            if(m_labelledRegion) { m_labelledRegion.OnLabelUpdated -= OnLabelUpdated; }
             if(m_noteRegion) { m_noteRegion.OnSizeUpdated -= OnSizeUpdated; }
         }
 

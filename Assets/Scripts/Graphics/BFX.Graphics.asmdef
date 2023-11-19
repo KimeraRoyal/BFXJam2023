@@ -1,8 +1,10 @@
 {
-    "name": "BFX.Gameplay",
+    "name": "BFX.Graphics",
     "rootNamespace": "BFX",
     "references": [
-        "GUID:e486c9dc83f138948848dc909864a63e"
+        "GUID:e486c9dc83f138948848dc909864a63e",
+        "GUID:df42c2b021d3f66478099feb037d2d70",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
