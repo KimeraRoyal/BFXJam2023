@@ -422,7 +422,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 167877271}
+      - m_Target: {fileID: 473988484}
         m_TargetAssemblyTypeName: BFX.MenuButton, Assembly-CSharp
         m_MethodName: Button
         m_Mode: 1
