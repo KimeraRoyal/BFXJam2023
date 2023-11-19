@@ -7,7 +7,7 @@ namespace BFX
     public class Drag : MonoBehaviour
     {
         // Variables for dragging
-        private bool dragging = false;
+        public bool dragging = false;
         private Vector3 offset;
         // Variables for snapping to snap points
         public SnapPoint snapPoint;
